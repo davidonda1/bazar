@@ -1,5 +1,4 @@
 import React from 'react';
-
 const BasketCard = ({item}) => {
 
     const countDiscount = () => {
@@ -13,7 +12,7 @@ const BasketCard = ({item}) => {
     return (
         <>
             <h5>{item.name} {item.quantity} items = {countDiscount()}$</h5>
-            <img src={item.img}/>
+            <img alt='fruits' src={item.img}/>
 
         </>
     );

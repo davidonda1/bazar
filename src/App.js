@@ -20,10 +20,7 @@ const App = () => {
             const indexOfPapaya = items.indexOf(item)
             if (item.name === 'Papaya') saleChecker(indexOfPapaya)
         }
-
-
         setBasket({...basket, value: basket.value + value, items})
-        //setBasket({item: item, value: basket.value + value})
     }
     const saleChecker = (indexOfPapaya) => {
         if (basket.items[indexOfPapaya].quantity % 3 === 0) {
@@ -63,7 +60,7 @@ const App = () => {
             })}
             </div>
             <div className='my_footer modal-footer'>
-                <p><AiFillLinkedin size='2rem'/><a className='linkedin' target='_blank'
+                <p><AiFillLinkedin size='2rem'/><a className='linkedin' target='_blank' rel='noreferrer'
                                                    href={linkedIn}>{linkedIn}</a><AiOutlineMail size='2rem'/>{email}</p>
                 <p>Created by David Miasnikov</p>
             </div>
@@ -73,13 +70,10 @@ const App = () => {
         const renderNorm = () => {
             return (
                 <>
-
                     {basket.items.map(item => <BasketCard key={item.img} item={item}/>)}
                     <h3 className='my_total'>Total price: {JSON.stringify(totalPrice())}$</h3>
                 </>
             )
-
-
         }
         return (<div>
             <div className='my_header container-fluid'>
@@ -108,5 +102,4 @@ const App = () => {
 }
 
 export default App;
-//ToDO sale & full_basket
 
