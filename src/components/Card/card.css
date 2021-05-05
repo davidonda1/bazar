@@ -1,0 +1,12 @@
+.my_btn{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    box-shadow: white;
+}
+.my_text{
+    background-color: black;
+    color: white;
+    border-radius: 10px ;
+    box-shadow: white;
+}
